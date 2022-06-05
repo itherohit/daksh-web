@@ -12,15 +12,29 @@
     font-weight: 600;
     text-align: left;
 }
-.sponser_slider{
+/* .sponser_slider{
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
+} */
+
+.sponser_slider{
+    margin: 1rem 0;
+    width: 100%;
 }
 
-.sponser_infinite{
-    margin: 10px 0 10px 10px;
-    height: 60px;
+.sponsers__div {
+    padding: 20px 40px;
+}
+
+/* .sponser_infinite{
+    padding: 20px 40px; 
+    border-right: 0.5px dotted #b3b0b0;
+} */
+
+.blackBackground {
+    background-color: #1f1f1f;
+    /* height: 80px; */
 }
 
 
@@ -31,8 +45,8 @@
     .sponsers__h3{
         font-size: 2.5rem;
     }
-    .sponser_infinite{
-        margin: 10px 10px 10px 0;
-        height: 50px;
+    .sponsers_div{
+        padding: 15px 30px;
+        max-width: 90vw !important;
     }
 }

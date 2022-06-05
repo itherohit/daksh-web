@@ -3,32 +3,37 @@ import styles from './bannercards.module.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Link from 'next/link';
 
 function BannerCards() {
     const carousel_items=[
       {
         idx:0,
-        description:"Events",
+        description:"Podcasts",
         src:'/tech.png',
-        buttonText:'view'
+        buttonText:'view',
+        href: "/podcast"
       },
       {
         idx:1,
-        description:"Workshops",
-        src:'/tech.png',
-        buttonText:'view'
+        description:"Events",
+        src:'/events.png',
+        buttonText:'view',
+        href: "/events-workshop"
       },
       {
         idx:2,
-        description:"Podcasts",
-        src:'/tech.png',
-        buttonText:'view'
+        description:"Workshops",
+        src:'/workshop.png',
+        buttonText:'view',
+        href: "/events-workshop"
       },
       {
         idx:3,
         description:"Teams",
-        src:'/tech.png',
-        buttonText:'view'
+        src:'/team.png',
+        buttonText:'view',
+        href: "/teams"
       }
     ]
 
@@ -68,7 +73,7 @@ function BannerCards() {
    return(   
        <>
        <div className={styles.cardRenderWrap}>
-          <div className={styles.cardcarousel} id="cardcarousel">
+          <div className={styles.cardcarousel} id="cardcarousel"  data-aos="fade-up">
             <Slider {...settings} >
                 {carousel_items.map((item,idx)=>{
                   return (
@@ -78,7 +83,9 @@ function BannerCards() {
                         <img className={styles.vector} src={item.src}/>
                       </div>
                       <div className={styles.card__head}>{item.description}</div>
-                      <div className={styles.card__viewbtn}>{item.buttonText}</div>
+                      <Link href={item.href} >
+                        <div className={styles.card__viewbtn}>{item.buttonText}</div>
+                      </Link>
                       </div>
                     </div>
                   )

@@ -3,6 +3,7 @@
     text-align: left;
     width: 100%;
     padding: 5rem;
+    overflow-x: hidden;
 }
 .container__about{
     width: 100%;
@@ -74,6 +75,8 @@
 .about__video_size{
     height: 250px;
     width: 400px;
+    border-radius: 10px;
+    border: 2px solid var(--white);
 }
 
  
